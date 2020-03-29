@@ -15,7 +15,7 @@ class CreateInvestorsTable extends Migration
     {
         Schema::create('investors', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('Investorname');
+            $table->text('Investor_name');
             $table->enum('Investor_type',['Accredited','Not Accredited']);
             $table->timestamps();
         });
