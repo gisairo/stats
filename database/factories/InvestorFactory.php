@@ -10,5 +10,6 @@ $factory->define(Investor::class, function (Faker $faker) {
     return [
         'Investor_name' => $faker->name,
         'Investor_type' => array_random($investortype),
+        'created_at' => date("Y-m-d H:i:s"),
     ];
 });
