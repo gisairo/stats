@@ -10,6 +10,6 @@ class Product extends Model
 
     public function transactions()
     {
-        return $this->hasMany('App\User');
+        return $this->hasMany('App\Transaction');
     }
 }
