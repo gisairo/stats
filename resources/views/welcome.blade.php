@@ -86,7 +86,7 @@
 
                 <div class="links">
                     <form action="#">
-                        <button>Start emailing clients</button>
+                        <button><a class="btn" href="{{ route('sendmail') }}">Click to Send Emails </a></button>
                     </form>
                 </div>
             </div>
