@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Investor extends Model
 {
-    protected $fillable = ['Investor_name', 'Investor_type'];
+    protected $fillable = ['email','investor_name', 'investor_type'];
 
     public function transactions()
     {

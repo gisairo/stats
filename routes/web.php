@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('sendemails', 'SystemActionController@sendEmails')->name( 'sendmail' );

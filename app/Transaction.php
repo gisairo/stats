@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Transaction extends Model
 {
-    public function investors()
+    public function investor()
     {
         return $this->belongsTo('App\Investor');
     }
     public function product()
     {
-        return $this->hasOne('App\Product');
+        return $this->belongsTo('App\Product');
     }
 }
