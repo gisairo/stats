@@ -7,4 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Investor extends Model
 {
     protected $fillable = ['Investor_name', 'Investor_type'];
+
+    public function transactions()
+    {
+        return $this->hasMany('App\Transaction');
+    }
 }

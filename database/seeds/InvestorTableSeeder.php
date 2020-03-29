@@ -11,7 +11,7 @@ class InvestorTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Investor::class, 10)->create()->each(function ($investor) {
+        factory(App\Investor::class, 20)->create()->each(function ($investor) {
             $investor->make();
         });
     }
