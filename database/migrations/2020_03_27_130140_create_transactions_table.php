@@ -15,10 +15,14 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('investment_id');
+            $table->unsignedBigInteger('product_id');
+            $table->unsignedBigInteger('investor_id');
+            $table->enum('investment_type',['credit','debit']);
+            $table->double('amount', 100, 2);
             $table->timestamps();
 
-            $table->foreign('investment_id')->references('id')->on('investments');
+            $table->foreign('investor_id')->references('id')->on('investors');
+            $table->foreign('product_id')->references('id')->on('products');
         });
     }
 
